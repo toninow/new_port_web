@@ -1,0 +1,98 @@
+/* Fuente personalizada */
+@font-face {
+   font-family: 'Type'; /* Nombre que usarás para referenciar la fuente */
+   src: url('../assets/fonts/Type.ttf') format('truetype'); /* Ruta relativa a la fuente */
+   font-weight: normal; /* Peso de la fuente */
+   font-style: normal; /* Estilo de la fuente */
+ }
+ 
+ /* Estilos generales */
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: black;
+   color: white;
+   font-family: 'Type', Arial, sans-serif; /* Aplicar la fuente personalizada */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+ }
+ 
+ /* Contenedor principal */
+ .container {
+   display: flex;
+   width: 80%;
+   max-width: 1200px;
+   margin: 0 auto;
+   flex-direction: row; /* Por defecto, horizontal */
+ }
+ 
+ /* Sección izquierda: Foto de perfil */
+ .left-section {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .profile-pic {
+   width: 500px;
+   height: 500px;
+   border-radius: 50%;
+   border: 3px solid white;
+   object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+ }
+ 
+ /* Sección derecha: Menú del portafolio */
+ .right-section {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .menu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ .menu ul li {
+   margin: 20px 0;
+   text-align: center;
+ }
+ 
+ .menu ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.5em;
+   transition: color 0.3s ease;
+   font-family: 'Type', Arial, sans-serif; /* Aplicar la fuente personalizada */
+ }
+ 
+ .menu ul li a:hover {
+   color: #ccc;
+ }
+ 
+ /* Estilos para móvil (pantallas menores a 768px) */
+ @media (max-width: 768px) {
+   .container {
+     flex-direction: column; /* Cambia a vertical */
+     align-items: center;
+     text-align: center;
+   }
+ 
+   .left-section {
+     margin-bottom: 40px; /* Espacio entre la imagen y el menú */
+   }
+ 
+   .profile-pic {
+     width: 150px;
+     height: 150px;
+   }
+ 
+   .menu ul li a {
+     font-size: 1.2em; /* Tamaño de fuente más pequeño para móvil */
+   }
+ }
